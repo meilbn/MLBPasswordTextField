@@ -22,6 +22,10 @@ MLBPasswordTextField * textField = [[MLBPasswordTextField alloc] initWithFrame:C
 ```
 
 ### In Iterface Builder
+Drag an UITextField to your storyboard or XIB, set its class to MLBPasswordTextField.
+That's it!
+
+If you want to custom, using properties in the Attributes Inspector.
 
 ![][Demo_In_IB]
 
@@ -78,6 +82,10 @@ MLBPasswordTextField * textField = [[MLBPasswordTextField alloc] initWithFrame:C
 ```
 
 ### Iterface Builder 中使用
+拖拽一个 ``UITextField`` 到你的 Storyboard 或者 XIB 中，将其 Class 设置为 ``MLBPasswordTextField``。
+就这样！
+
+如果想自定义，可以使用 Attributes Inspector 中提供的属性。
 
 ![][Demo_In_IB]
 
