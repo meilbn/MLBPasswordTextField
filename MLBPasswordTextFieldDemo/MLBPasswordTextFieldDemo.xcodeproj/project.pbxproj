@@ -1,0 +1,346 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2343666D1DE27DB40052EE83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2343666C1DE27DB40052EE83 /* main.m */; };
+		234366701DE27DB40052EE83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2343666F1DE27DB40052EE83 /* AppDelegate.m */; };
+		234366731DE27DB40052EE83 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 234366721DE27DB40052EE83 /* ViewController.m */; };
+		234366761DE27DB40052EE83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 234366741DE27DB40052EE83 /* Main.storyboard */; };
+		234366781DE27DB40052EE83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 234366771DE27DB40052EE83 /* Assets.xcassets */; };
+		2343667B1DE27DB40052EE83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 234366791DE27DB40052EE83 /* LaunchScreen.storyboard */; };
+		234366851DE27DFC0052EE83 /* MLBPasswordTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 234366841DE27DFC0052EE83 /* MLBPasswordTextField.m */; };
+		234366881DE2830C0052EE83 /* MLBPasswordRenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 234366871DE2830C0052EE83 /* MLBPasswordRenderView.m */; };
+		2343668B1DE284A80052EE83 /* UIView+MLBUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2343668A1DE284A80052EE83 /* UIView+MLBUtilities.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		234366681DE27DB40052EE83 /* MLBPasswordTextFieldDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLBPasswordTextFieldDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2343666C1DE27DB40052EE83 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2343666E1DE27DB40052EE83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2343666F1DE27DB40052EE83 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		234366711DE27DB40052EE83 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		234366721DE27DB40052EE83 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		234366751DE27DB40052EE83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		234366771DE27DB40052EE83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2343667A1DE27DB40052EE83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2343667C1DE27DB40052EE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		234366831DE27DFC0052EE83 /* MLBPasswordTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBPasswordTextField.h; sourceTree = "<group>"; };
+		234366841DE27DFC0052EE83 /* MLBPasswordTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLBPasswordTextField.m; sourceTree = "<group>"; };
+		234366861DE2830C0052EE83 /* MLBPasswordRenderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBPasswordRenderView.h; sourceTree = "<group>"; };
+		234366871DE2830C0052EE83 /* MLBPasswordRenderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLBPasswordRenderView.m; sourceTree = "<group>"; };
+		234366891DE284A80052EE83 /* UIView+MLBUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MLBUtilities.h"; sourceTree = "<group>"; };
+		2343668A1DE284A80052EE83 /* UIView+MLBUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MLBUtilities.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		234366651DE27DB30052EE83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2343665F1DE27DB30052EE83 = {
+			isa = PBXGroup;
+			children = (
+				2343666A1DE27DB40052EE83 /* MLBPasswordTextFieldDemo */,
+				234366691DE27DB40052EE83 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		234366691DE27DB40052EE83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				234366681DE27DB40052EE83 /* MLBPasswordTextFieldDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2343666A1DE27DB40052EE83 /* MLBPasswordTextFieldDemo */ = {
+			isa = PBXGroup;
+			children = (
+				234366821DE27DEA0052EE83 /* MLBPasswordTextField */,
+				2343666E1DE27DB40052EE83 /* AppDelegate.h */,
+				2343666F1DE27DB40052EE83 /* AppDelegate.m */,
+				234366711DE27DB40052EE83 /* ViewController.h */,
+				234366721DE27DB40052EE83 /* ViewController.m */,
+				234366891DE284A80052EE83 /* UIView+MLBUtilities.h */,
+				2343668A1DE284A80052EE83 /* UIView+MLBUtilities.m */,
+				234366741DE27DB40052EE83 /* Main.storyboard */,
+				234366771DE27DB40052EE83 /* Assets.xcassets */,
+				234366791DE27DB40052EE83 /* LaunchScreen.storyboard */,
+				2343667C1DE27DB40052EE83 /* Info.plist */,
+				2343666B1DE27DB40052EE83 /* Supporting Files */,
+			);
+			path = MLBPasswordTextFieldDemo;
+			sourceTree = "<group>";
+		};
+		2343666B1DE27DB40052EE83 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2343666C1DE27DB40052EE83 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		234366821DE27DEA0052EE83 /* MLBPasswordTextField */ = {
+			isa = PBXGroup;
+			children = (
+				234366831DE27DFC0052EE83 /* MLBPasswordTextField.h */,
+				234366841DE27DFC0052EE83 /* MLBPasswordTextField.m */,
+				234366861DE2830C0052EE83 /* MLBPasswordRenderView.h */,
+				234366871DE2830C0052EE83 /* MLBPasswordRenderView.m */,
+			);
+			name = MLBPasswordTextField;
+			path = ../../MLBPasswordTextField;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		234366671DE27DB30052EE83 /* MLBPasswordTextFieldDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2343667F1DE27DB40052EE83 /* Build configuration list for PBXNativeTarget "MLBPasswordTextFieldDemo" */;
+			buildPhases = (
+				234366641DE27DB30052EE83 /* Sources */,
+				234366651DE27DB30052EE83 /* Frameworks */,
+				234366661DE27DB30052EE83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MLBPasswordTextFieldDemo;
+			productName = MLBPasswordTextFieldDemo;
+			productReference = 234366681DE27DB40052EE83 /* MLBPasswordTextFieldDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		234366601DE27DB30052EE83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = meilbn;
+				TargetAttributes = {
+					234366671DE27DB30052EE83 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 5K64AXHS95;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 234366631DE27DB30052EE83 /* Build configuration list for PBXProject "MLBPasswordTextFieldDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2343665F1DE27DB30052EE83;
+			productRefGroup = 234366691DE27DB40052EE83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				234366671DE27DB30052EE83 /* MLBPasswordTextFieldDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		234366661DE27DB30052EE83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2343667B1DE27DB40052EE83 /* LaunchScreen.storyboard in Resources */,
+				234366781DE27DB40052EE83 /* Assets.xcassets in Resources */,
+				234366761DE27DB40052EE83 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		234366641DE27DB30052EE83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				234366881DE2830C0052EE83 /* MLBPasswordRenderView.m in Sources */,
+				2343668B1DE284A80052EE83 /* UIView+MLBUtilities.m in Sources */,
+				234366851DE27DFC0052EE83 /* MLBPasswordTextField.m in Sources */,
+				234366731DE27DB40052EE83 /* ViewController.m in Sources */,
+				234366701DE27DB40052EE83 /* AppDelegate.m in Sources */,
+				2343666D1DE27DB40052EE83 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		234366741DE27DB40052EE83 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				234366751DE27DB40052EE83 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		234366791DE27DB40052EE83 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2343667A1DE27DB40052EE83 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2343667D1DE27DB40052EE83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2343667E1DE27DB40052EE83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		234366801DE27DB40052EE83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5K64AXHS95;
+				INFOPLIST_FILE = MLBPasswordTextFieldDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.meilbn.MLBPasswordTextFieldDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		234366811DE27DB40052EE83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5K64AXHS95;
+				INFOPLIST_FILE = MLBPasswordTextFieldDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.meilbn.MLBPasswordTextFieldDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		234366631DE27DB30052EE83 /* Build configuration list for PBXProject "MLBPasswordTextFieldDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2343667D1DE27DB40052EE83 /* Debug */,
+				2343667E1DE27DB40052EE83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2343667F1DE27DB40052EE83 /* Build configuration list for PBXNativeTarget "MLBPasswordTextFieldDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				234366801DE27DB40052EE83 /* Debug */,
+				234366811DE27DB40052EE83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 234366601DE27DB30052EE83 /* Project object */;
+}
