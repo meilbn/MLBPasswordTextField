@@ -66,7 +66,6 @@ MLBPasswordTextField is provided under the MIT license. See LICENSE file for det
 
 # 中文介绍
 一个 iOS 上自定义的密码输入文本框，类似于微信支付。
-A custom password input like WeChat payment for iOS.
 
 ## 演示项目
 运行 ``MLBPasswordTextFieldDemo/MLBPasswordTextFieldDemo.xcworkspace``。
@@ -88,24 +87,24 @@ MLBPasswordTextField * textField = [[MLBPasswordTextField alloc] initWithFrame:C
 - [x] 可以在 Storyboard 或者 XIB 中配置自定义属性
 
 ## 版本历史
-- 0.0.1 first version, contains common features.
+- 0.0.1 第一版。
 
 ## 安装
 ### CocoaPods
-1. Add ``pod 'MLBPasswordTextField'`` to your Podfile.
-2. Run ``pod install`` or ``pod update``.
-3. Import \<MLBPasswordTextField/MLBPasswordTextField.h\>.
+1. 在 Podfile 中添加 ``pod 'MLBPasswordTextField'``。
+2. 运行 ``pod install`` 或 ``pod update``。
+3. 导入 \<MLBPasswordTextField/MLBPasswordTextField.h\>。
 
 ### Carthage
-Not yet supported.
+暂未支持。
 
 ### 手动安装
-1. Download all the files in the ``MLBPasswordTextField`` subdirectory.
-2. Add the source files to your Xcode project.
-3. Import ``MLBPasswordTextField.h``.
+1. 下载 MLBPasswordTextField 文件夹内所有源文件。
+2. 将 MLBPasswordTextField 文件夹内所有源文件添加（拖入）到你的工程中。
+3. 导入 ``MLBPasswordTextField.h``。
 
 ## 系统要求
-This library requires ``iOS 7.0+`` 和 ``Xcode 8.0+``.
+该项目最低支持 ``iOS 7.0+`` 和 ``Xcode 8.0+``。
 
 ## 测试设备
 ### 真机
