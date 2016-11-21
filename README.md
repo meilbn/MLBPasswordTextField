@@ -7,7 +7,7 @@
 
 A custom password input like WeChat payment for iOS.
 
-**[中文介绍](https://github.com/meilbn/MLBPasswordTextField#中文介绍)**
+## **[中文介绍](https://github.com/meilbn/MLBPasswordTextField#中文介绍)**
 
 ![][Demo]
 
