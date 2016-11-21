@@ -43,7 +43,7 @@
     MLBPasswordTextField *textField0 = [[MLBPasswordTextField alloc] initWithFrame:CGRectMake(0, label.bottom + 15, 240, 40)];
     textField0.centerX = self.view.centerX;
     textField0.mlb_delegate = self;
-//    textField0.mlb_pwdRenderView.mlb_borderWidth = 1;
+    textField0.mlb_borderWidth = 1;
     [self.view addSubview:textField0];
 }
 
