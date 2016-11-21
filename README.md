@@ -44,7 +44,8 @@ Delegate Implement delegate below to get called when input complete:
 - [x] Design in Storyboard or XIB
 
 ## Version History
-- 0.0.1 first version, contains common features.
+- 0.0.2 Bug Fixes. Draw border and dot more precision.
+- 0.0.1 First version. Contains common features.
 
 ## Installation
 ### CocoaPods
@@ -112,6 +113,7 @@ MLBPasswordTextField * textField = [[MLBPasswordTextField alloc] initWithFrame:C
 - [x] 可以在 Storyboard 或者 XIB 中配置自定义属性
 
 ## 版本历史
+- 0.0.2 Bug 修复。更加精确地画边框和点。
 - 0.0.1 第一版。
 
 ## 安装
