@@ -9,6 +9,8 @@ A custom password input like WeChat payment for iOS.
 
 **[中文介绍](https://github.com/meilbn/MLBPasswordTextField#中文介绍)**
 
+![][Demo]
+
 ## Demo Project
 See ``MLBPasswordTextFieldDemo/MLBPasswordTextFieldDemo.xcworkspace``.
 
@@ -21,7 +23,7 @@ MLBPasswordTextField * textField = [[MLBPasswordTextField alloc] initWithFrame:C
 
 ### In Iterface Builder
 
-
+![][Demo_In_IB]
 
 ## Features
 - [x] Easy to use
@@ -52,16 +54,19 @@ This library requires ``iOS 7.0+`` 和 ``Xcode 8.0+``.
 ### Devices
 iPhone 5S (iOS 8.3)
 
+iPhone 7 Plus (iOS 10.1.1)
+
 ### Simulators
 iPhone 6 (iOS 9.3)
 
 iPhone 7 (iOS 10.1)
 
 ## License
-MLBOmniButton is provided under the MIT license. See LICENSE file for details.
+MLBPasswordTextField is provided under the MIT license. See LICENSE file for details.
 
 # 中文介绍
-简单易用的 UIButton 自定义控件，包含一些常见需求的功能。
+一个 iOS 上自定义的密码输入文本框，类似于微信支付。
+A custom password input like WeChat payment for iOS.
 
 ## 演示项目
 运行 ``MLBPasswordTextFieldDemo/MLBPasswordTextFieldDemo.xcworkspace``。
@@ -75,7 +80,7 @@ MLBPasswordTextField * textField = [[MLBPasswordTextField alloc] initWithFrame:C
 
 ### Iterface Builder 中使用
 
-
+![][Demo_In_IB]
 
 ## 功能
 - [x] Easy to use
@@ -106,10 +111,15 @@ This library requires ``iOS 7.0+`` 和 ``Xcode 8.0+``.
 ### 真机
 iPhone 5S (iOS 8.3)
 
+iPhone 7 Plus (iOS 10.1.1)
+
 ### 模拟器
 iPhone 6 (iOS 9.3)
 
 iPhone 7 (iOS 10.1)
 
 ## 许可证
-MLBOmniButton 使用 MIT 许可证，详情见 LICENSE 文件。
+MLBPasswordTextField 使用 MIT 许可证，详情见 LICENSE 文件。
+
+[Demo]: https://github.com/meilbn/MLBPasswordTextField/blob/master/Screenshots/Demo.gif
+[Demo_In_IB]: https://github.com/meilbn/MLBPasswordTextField/blob/master/Screenshots/Demo_In_IB.png
