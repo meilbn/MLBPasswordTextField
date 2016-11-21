@@ -34,19 +34,16 @@ CGRect MLBRectFor1PxStroke(CGRect rect) {
         CGContextSetLineWidth(borderContext, _mlb_rBorderWidth);
         CGContextSetStrokeColorWithColor(borderContext, _mlb_rBorderColor.CGColor);
         CGContextSetAllowsAntialiasing(borderContext, false);
+        CGContextSetShouldAntialias(borderContext, false);
         
         CGContextAddRect(borderContext, MLBRectFor1PxStroke(self.bounds));
         
         if (_mlb_rNumberOfDot > 0) {
-            CGFloat segmentWidth = (CGRectGetWidth(self.bounds) - (_mlb_rNumberOfDot + 1) * _mlb_rBorderWidth) / _mlb_rNumberOfDot;
+            CGFloat segmentWidth = CGRectGetWidth(self.bounds) / _mlb_rNumberOfDot;
             CGFloat lineHeight = CGRectGetHeight(self.bounds);
             
-            CGFloat pointX = _mlb_rBorderWidth;
             for (int i = 1; i < _mlb_rNumberOfDot; i++) {
-                pointX += segmentWidth + _mlb_rBorderWidth / 2.0;
-                if (i > 1) {
-                    pointX += _mlb_rBorderWidth / 2.0;
-                }
+                CGFloat pointX = i * segmentWidth - _mlb_rBorderWidth;
                 CGContextMoveToPoint(borderContext, pointX, 0);
                 CGContextAddLineToPoint(borderContext, pointX, lineHeight - _mlb_rBorderWidth);
             }
@@ -63,13 +60,12 @@ CGRect MLBRectFor1PxStroke(CGRect rect) {
         CGContextSetShouldAntialias(dotContext, true);
         
         CGFloat segmentWidth = CGRectGetWidth(self.bounds) / _mlb_rNumberOfDot;
-        CGFloat centerX = segmentWidth / 2;
         CGFloat height = CGRectGetHeight(self.bounds);
-        CGFloat centerY = height / 2;
+        CGFloat centerY = height / 2.0;
         
-        for (int i = 1; i <= _mlb_rCurrentNumberOfDot; i++) {
+        for (int i = 0; i < _mlb_rCurrentNumberOfDot; i++) {
+            CGFloat centerX = segmentWidth / 2.0 + i * segmentWidth;
             CGContextFillEllipseInRect(dotContext, CGRectMake(centerX - _mlb_rDotRadius, centerY - _mlb_rDotRadius, _mlb_rDotRadius * 2, _mlb_rDotRadius * 2));
-            centerX += segmentWidth;
         }
         
         CGContextStrokePath(dotContext);
