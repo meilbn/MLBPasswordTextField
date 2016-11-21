@@ -17,17 +17,25 @@ See ``MLBPasswordTextFieldDemo/MLBPasswordTextFieldDemo.xcworkspace``.
 ## Usage
 ### In Programmatically
 
-```
+```ObjectiveC
 MLBPasswordTextField * textField = [[MLBPasswordTextField alloc] initWithFrame:CGRectMake(0, 0, 240, 40)];
 ```
 
 ### In Iterface Builder
-Drag an UITextField to your storyboard or XIB, set its class to MLBPasswordTextField.
+Drag an UITextField to your Storyboard or XIB, set its class to MLBPasswordTextField.
 That's it!
 
 If you want to custom, using properties in the Attributes Inspector.
 
 ![][Demo_In_IB]
+
+### Delegate
+
+Delegate Implement delegate below to get called when input complete:
+
+```ObjectiveC
+- (void)mlb_passwordTextField:(MLBPasswordTextField *)pwdTextField didFilledPassword:(NSString *)password;
+```
 
 ## Features
 - [x] Easy to use
@@ -77,7 +85,7 @@ MLBPasswordTextField is provided under the MIT license. See LICENSE file for det
 ## 使用方式
 ### 代码中使用
 
-```
+```ObjectiveC
 MLBPasswordTextField * textField = [[MLBPasswordTextField alloc] initWithFrame:CGRectMake(0, 0, 240, 40)];
 ```
 
@@ -88,6 +96,13 @@ MLBPasswordTextField * textField = [[MLBPasswordTextField alloc] initWithFrame:C
 如果想自定义，可以使用 Attributes Inspector 中提供的属性。
 
 ![][Demo_In_IB]
+
+### Delegate
+当输入完成时，可以使用 Delegate 的委托方法来获取回调：
+
+```ObjectiveC
+- (void)mlb_passwordTextField:(MLBPasswordTextField *)pwdTextField didFilledPassword:(NSString *)password;
+```
 
 ## 功能
 - [x] 使用简单
