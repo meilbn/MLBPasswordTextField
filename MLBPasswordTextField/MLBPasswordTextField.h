@@ -5,7 +5,7 @@
 //  Created by meilbn on 21/11/2016.
 //  Copyright © 2016 meilbn. All rights reserved.
 //
-//  Version: 0.0.1
+//  Version: 0.0.2
 
 #import <UIKit/UIKit.h>
 #import "MLBPasswordRenderView.h"

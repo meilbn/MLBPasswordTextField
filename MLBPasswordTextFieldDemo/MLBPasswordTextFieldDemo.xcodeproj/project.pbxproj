@@ -339,6 +339,7 @@
 				234366811DE27DB40052EE83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
