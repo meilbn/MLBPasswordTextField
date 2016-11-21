@@ -38,13 +38,17 @@ CGRect MLBRectFor1PxStroke(CGRect rect) {
         CGContextAddRect(borderContext, MLBRectFor1PxStroke(self.bounds));
         
         if (_mlb_rNumberOfDot > 0) {
-            CGFloat segmentWidth = CGRectGetWidth(self.bounds) / _mlb_rNumberOfDot;
+            CGFloat segmentWidth = (CGRectGetWidth(self.bounds) - (_mlb_rNumberOfDot + 1) * _mlb_rBorderWidth) / _mlb_rNumberOfDot;
             CGFloat lineHeight = CGRectGetHeight(self.bounds);
             
+            CGFloat pointX = _mlb_rBorderWidth;
             for (int i = 1; i < _mlb_rNumberOfDot; i++) {
-                CGFloat pointX = i * segmentWidth - _mlb_rBorderWidth + 0.5;
+                pointX += segmentWidth + _mlb_rBorderWidth / 2.0;
+                if (i > 1) {
+                    pointX += _mlb_rBorderWidth / 2.0;
+                }
                 CGContextMoveToPoint(borderContext, pointX, 0);
-                CGContextAddLineToPoint(borderContext, pointX, lineHeight - _mlb_rBorderWidth - 0.5);
+                CGContextAddLineToPoint(borderContext, pointX, lineHeight - _mlb_rBorderWidth);
             }
         }
         
