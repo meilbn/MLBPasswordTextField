@@ -83,9 +83,9 @@ MLBPasswordTextField * textField = [[MLBPasswordTextField alloc] initWithFrame:C
 ![][Demo_In_IB]
 
 ## 功能
-- [x] Easy to use
-- [x] Use with Storyboards, XIBs, Code
-- [x] Design in Storyboard or XIB
+- [x] 使用简单
+- [x] 可以在 Storyboards、XIB 中使用，当然也可以通过代码创建
+- [x] 可以在 Storyboard 或者 XIB 中配置自定义属性
 
 ## 版本历史
 - 0.0.1 first version, contains common features.
