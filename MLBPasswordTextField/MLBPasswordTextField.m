@@ -8,10 +8,6 @@
 
 #import "MLBPasswordTextField.h"
 
-#define MLBPasswordRenderViewDefaultBorderColor              [UIColor colorWithWhite:204 / 255.0 alpha:1]
-
-NSUInteger const kMLBPasswordTextFieldDefaultNumberOfDigit = 6;
-
 @interface MLBPasswordTextField ()
 
 @property (nonatomic, strong) MLBPasswordRenderView *mlb_pwdRenderView;
@@ -60,10 +56,7 @@ NSUInteger const kMLBPasswordTextFieldDefaultNumberOfDigit = 6;
 
 - (void)inspectableDefaults {
     _mlb_numberOfDigit = kMLBPasswordTextFieldDefaultNumberOfDigit;
-    _mlb_dotColor = [UIColor blackColor];
-    _mlb_dotRadius = 8.0;
-    _mlb_borderColor = MLBPasswordRenderViewDefaultBorderColor;
-    _mlb_borderWidth = 0.5;
+    _mlb_showCursor = NO;
 }
 
 - (void)mlb_setup {
@@ -79,14 +72,11 @@ NSUInteger const kMLBPasswordTextFieldDefaultNumberOfDigit = 6;
         
         [self inspectableDefaults];
         
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidBeginEditing:) name:UITextFieldTextDidBeginEditingNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidEndEditing:) name:UITextFieldTextDidEndEditingNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChanged:) name:UITextFieldTextDidChangeNotification object:nil];
         
         self.mlb_pwdRenderView = [[MLBPasswordRenderView alloc] init];
-        self.mlb_pwdRenderView.mlb_rNumberOfDot = _mlb_numberOfDigit;
-        self.mlb_pwdRenderView.mlb_rDotColor = _mlb_dotColor;
-        self.mlb_pwdRenderView.mlb_rDotRadius = _mlb_dotRadius;
-        self.mlb_pwdRenderView.mlb_rBorderColor = _mlb_borderColor;
-        self.mlb_pwdRenderView.mlb_rBorderWidth = _mlb_borderWidth;
         [self addSubview:self.mlb_pwdRenderView];
         [self sendSubviewToBack:self.mlb_pwdRenderView];
         
@@ -112,20 +102,6 @@ NSUInteger const kMLBPasswordTextFieldDefaultNumberOfDigit = 6;
     }
 }
 
-- (void)setMlb_dotColor:(UIColor *)mlb_dotColor {
-    if (_mlb_dotColor != mlb_dotColor) {
-        _mlb_dotColor = mlb_dotColor;
-        self.mlb_pwdRenderView.mlb_rDotColor = _mlb_dotColor;
-    }
-}
-
-- (void)setMlb_dotRadius:(CGFloat)mlb_dotRadius {
-    if (_mlb_dotRadius != mlb_dotRadius) {
-        _mlb_dotRadius = mlb_dotRadius;
-        self.mlb_pwdRenderView.mlb_rDotRadius = _mlb_dotRadius;
-    }
-}
-
 - (void)setMlb_borderColor:(UIColor *)mlb_borderColor {
     if (_mlb_borderColor != mlb_borderColor) {
         _mlb_borderColor = mlb_borderColor;
@@ -140,7 +116,60 @@ NSUInteger const kMLBPasswordTextFieldDefaultNumberOfDigit = 6;
     }
 }
 
+- (void)setMlb_dotColor:(UIColor *)mlb_dotColor {
+    if (_mlb_dotColor != mlb_dotColor) {
+        _mlb_dotColor = mlb_dotColor;
+        self.mlb_pwdRenderView.mlb_rDotColor = _mlb_dotColor;
+    }
+}
+
+- (void)setMlb_dotRadius:(CGFloat)mlb_dotRadius {
+    if (_mlb_dotRadius != mlb_dotRadius) {
+        _mlb_dotRadius = mlb_dotRadius;
+        self.mlb_pwdRenderView.mlb_rDotRadius = _mlb_dotRadius;
+    }
+}
+
+- (void)setMlb_cursorColor:(UIColor *)mlb_cursorColor {
+    if (_mlb_cursorColor != mlb_cursorColor) {
+        _mlb_cursorColor = mlb_cursorColor;
+        self.mlb_pwdRenderView.mlb_rCursorColor = _mlb_cursorColor;
+    }
+}
+
+- (void)setMlb_cursorWidth:(CGFloat)mlb_cursorWidth {
+    if (_mlb_cursorWidth != mlb_cursorWidth) {
+        _mlb_cursorWidth = mlb_cursorWidth;
+        self.mlb_pwdRenderView.mlb_rCursorWidth = _mlb_cursorWidth;
+    }
+}
+
+- (void)setMlb_cursorHeight:(CGFloat)mlb_cursorHeight {
+    if (_mlb_cursorHeight != mlb_cursorHeight) {
+        _mlb_cursorHeight = mlb_cursorHeight;
+        self.mlb_pwdRenderView.mlb_rCursorHeight = _mlb_cursorHeight;
+    }
+}
+
 #pragma mark - Notifications
+
+- (void)textDidBeginEditing:(NSNotification *)notification {
+    UITextField *textField = (UITextField *)notification.object;
+    if (textField == self) {
+        if (_mlb_showCursor) {
+            self.mlb_pwdRenderView.mlb_rShowCursor = YES;
+        }
+    }
+}
+
+- (void)textDidEndEditing:(NSNotification *)notification {
+    UITextField *textField = (UITextField *)notification.object;
+    if (textField == self) {
+        if (_mlb_showCursor) {
+            self.mlb_pwdRenderView.mlb_rShowCursor = NO;
+        }
+    }
+}
 
 - (void)textDidChanged:(NSNotification *)notification {
     UITextField *textField = (UITextField *)notification.object;
