@@ -22,13 +22,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In IB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX9-TY-dzQ">
-                                <rect key="frame" x="170.5" y="140" width="34" height="21"/>
+                                <rect key="frame" x="171" y="120" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d1A-hq-KE6" customClass="MLBPasswordTextField">
-                                <rect key="frame" x="107" y="176" width="160" height="40"/>
+                                <rect key="frame" x="107" y="156" width="160" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="1c5-OR-mYK"/>
                                     <constraint firstAttribute="height" constant="40" id="Xae-c4-yqw"/>
@@ -43,15 +43,36 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="mlb_borderColor">
                                         <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="mlb_showCursor" value="NO"/>
                                 </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UITextField" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmT-9G-s5a">
+                                <rect key="frame" x="144.5" y="211" width="86" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="isJ-2F-YGJ">
+                                <rect key="frame" x="87.5" y="247" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="JR9-fP-i5p"/>
+                                    <constraint firstAttribute="height" constant="40" id="wF1-b9-eC6"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="eX9-TY-dzQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="avh-7j-66G"/>
+                            <constraint firstItem="isJ-2F-YGJ" firstAttribute="top" secondItem="VmT-9G-s5a" secondAttribute="bottom" constant="15" id="0Jg-Nd-X10"/>
+                            <constraint firstItem="VmT-9G-s5a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4hk-eJ-6R1"/>
+                            <constraint firstItem="isJ-2F-YGJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AJP-mW-rDm"/>
+                            <constraint firstItem="eX9-TY-dzQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="avh-7j-66G"/>
                             <constraint firstItem="d1A-hq-KE6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dVm-uL-5nm"/>
                             <constraint firstItem="d1A-hq-KE6" firstAttribute="top" secondItem="eX9-TY-dzQ" secondAttribute="bottom" constant="15" id="fI2-pz-Qbj"/>
                             <constraint firstItem="eX9-TY-dzQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pLw-t6-4bD"/>
+                            <constraint firstItem="VmT-9G-s5a" firstAttribute="top" secondItem="d1A-hq-KE6" secondAttribute="bottom" constant="15" id="wcs-Xc-7Qw"/>
                         </constraints>
                     </view>
                 </viewController>
