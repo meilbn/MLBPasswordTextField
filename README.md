@@ -9,7 +9,7 @@ A custom password input like WeChat payment for iOS.
 
 **[中文介绍](https://github.com/meilbn/MLBPasswordTextField#中文介绍)**
 
-![][Demo]
+![][Demo_v0.0.3]
 
 ## Demo Project
 See ``MLBPasswordTextFieldDemo/MLBPasswordTextFieldDemo.xcworkspace``.
@@ -42,8 +42,10 @@ Delegate Implement delegate below to get called when input complete:
 - [x] Easy to use
 - [x] Use with Storyboards, XIBs, Code
 - [x] Design in Storyboard or XIB
+- [x] Cursor supported (>= 0.0.3)
 
 ## Version History
+- 0.0.3 Support show cursor.
 - 0.0.2 Bug Fixes. Draw border and dot more precision.
 - 0.0.1 First version. Contains common features.
 
@@ -111,8 +113,10 @@ MLBPasswordTextField * textField = [[MLBPasswordTextField alloc] initWithFrame:C
 - [x] 使用简单
 - [x] 可以在 Storyboards、XIB 中使用，当然也可以通过代码创建
 - [x] 可以在 Storyboard 或者 XIB 中配置自定义属性
+- [x] 支持显示光标 (版本 >= 0.0.3)
 
 ## 版本历史
+- 0.0.3 支持显示光标。
 - 0.0.2 Bug 修复。更加精确地画边框和点。
 - 0.0.1 第一版。
 
@@ -148,4 +152,6 @@ iPhone 7 (iOS 10.1)
 MLBPasswordTextField 使用 MIT 许可证，详情见 LICENSE 文件。
 
 [Demo]: https://github.com/meilbn/MLBPasswordTextField/blob/master/Screenshots/Demo.gif
+[Demo_v0.0.3]: https://github.com/meilbn/MLBPasswordTextField/blob/master/Screenshots/Demo_v0.0.3.gif
+
 [Demo_In_IB]: https://github.com/meilbn/MLBPasswordTextField/blob/master/Screenshots/Demo_In_IB.png
