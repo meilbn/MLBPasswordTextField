@@ -12,10 +12,6 @@
 #define MLBPasswordRenderViewDefaultBorderColor         [UIColor colorWithWhite:204 / 255.0 alpha:1] // #FFCCCCCC
 #define MLBPasswordDefaultCursorColor                   [UIColor colorWithRed:66 / 255.0 green:107 / 255.0 blue:242 / 255.0 alpha:1] // #FF426BF2
 
-CGRect MLBRectFor1PxStroke(CGRect rect) {
-    return CGRectMake(rect.origin.x + 0.5, rect.origin.y + 0.5, rect.size.width - 1, rect.size.height - 1);
-}
-
 NSUInteger const kMLBPasswordTextFieldDefaultNumberOfDigit = 6;
 
 NSString *const kMLBPasswordRenderViewCursorAnimationKeyPath = @"opacity";
@@ -43,20 +39,24 @@ NSString *const kMLBPasswordRenderViewCursorAnimationKeyPath = @"opacity";
 - (void)drawRect:(CGRect)rect {
     if (_mlb_rBorderWidth > 0) {
         CGContextRef borderContext = UIGraphicsGetCurrentContext();
-        CGContextSetLineWidth(borderContext, _mlb_rBorderWidth);
+        CGContextSetLineWidth(borderContext, _mlb_rBorderWidth * 2.0);
         CGContextSetStrokeColorWithColor(borderContext, _mlb_rBorderColor.CGColor);
         CGContextSetAllowsAntialiasing(borderContext, false);
         CGContextSetShouldAntialias(borderContext, false);
         
-        CGContextAddRect(borderContext, MLBRectFor1PxStroke(self.bounds));
+        CGContextAddRect(borderContext, self.bounds);
+        
+        CGContextStrokePath(borderContext);
+        
+        CGContextSetLineWidth(borderContext, _mlb_rBorderWidth);
         
         if (_mlb_rNumberOfDot > 0) {
             CGFloat segmentWidth = CGRectGetWidth(self.bounds) / _mlb_rNumberOfDot;
             CGFloat lineHeight = CGRectGetHeight(self.bounds);
             
             for (int i = 1; i < _mlb_rNumberOfDot; i++) {
-                CGFloat pointX = i * segmentWidth - _mlb_rBorderWidth;
-                CGContextMoveToPoint(borderContext, pointX, 0);
+                CGFloat pointX = i * segmentWidth - _mlb_rBorderWidth / 2.0;
+                CGContextMoveToPoint(borderContext, pointX, _mlb_rBorderWidth);
                 CGContextAddLineToPoint(borderContext, pointX, lineHeight - _mlb_rBorderWidth);
             }
         }
@@ -194,7 +194,6 @@ NSString *const kMLBPasswordRenderViewCursorAnimationKeyPath = @"opacity";
     if (_mlb_rCurrentNumberOfDot != mlb_rCurrentNumberOfDot) {
         _mlb_rCurrentNumberOfDot = mlb_rCurrentNumberOfDot;
         [self setNeedsDisplay];
-        
         [self mlb_layoutCursor];
     }
 }
