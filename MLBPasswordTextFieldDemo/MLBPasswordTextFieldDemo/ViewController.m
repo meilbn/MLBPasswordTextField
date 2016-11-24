@@ -21,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//    self.view.backgroundColor = [UIColor redColor];
     
     [self initDatas];
     [self setupViews];
@@ -43,6 +44,7 @@
     textField0.centerX = self.view.centerX;
     textField0.mlb_delegate = self;
     textField0.mlb_showCursor = YES;
+    textField0.mlb_borderWidth = 1;
     [self.view addSubview:textField0];
 }
 
