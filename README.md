@@ -69,9 +69,13 @@ This library requires ``iOS 7.0+`` 和 ``Xcode 8.0+``.
 
 ## Tested Devices
 ### Devices
+iPhone 7 Plus (iOS 10.1.1)
+
 iPhone 5S (iOS 8.3)
 
-iPhone 7 Plus (iOS 10.1.1)
+iPhone 4S (iOS 8.1)
+
+iPhone 4 (iOS 7.1.2)
 
 ### Simulators
 iPhone 6 (iOS 9.3)
@@ -141,9 +145,13 @@ MLBPasswordTextField * textField = [[MLBPasswordTextField alloc] initWithFrame:C
 
 ## 测试设备
 ### 真机
+iPhone 7 Plus (iOS 10.1.1)
+
 iPhone 5S (iOS 8.3)
 
-iPhone 7 Plus (iOS 10.1.1)
+iPhone 4S (iOS 8.1)
+
+iPhone 4 (iOS 7.1.2)
 
 ### 模拟器
 iPhone 6 (iOS 9.3)
