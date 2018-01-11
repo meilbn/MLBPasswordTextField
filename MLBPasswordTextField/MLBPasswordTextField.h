@@ -42,4 +42,6 @@ IB_DESIGNABLE
 
 @property (nonatomic, assign) IBInspectable BOOL mlb_showCursor; // default is NO
 
+- (void)reset;
+
 @end

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -62,6 +62,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HI2-Kq-u0R">
+                                <rect key="frame" x="168" y="302" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j9o-cD-PCr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -72,9 +79,14 @@
                             <constraint firstItem="d1A-hq-KE6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dVm-uL-5nm"/>
                             <constraint firstItem="d1A-hq-KE6" firstAttribute="top" secondItem="eX9-TY-dzQ" secondAttribute="bottom" constant="15" id="fI2-pz-Qbj"/>
                             <constraint firstItem="eX9-TY-dzQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pLw-t6-4bD"/>
+                            <constraint firstItem="HI2-Kq-u0R" firstAttribute="top" secondItem="isJ-2F-YGJ" secondAttribute="bottom" constant="15" id="sDJ-wJ-HIR"/>
                             <constraint firstItem="VmT-9G-s5a" firstAttribute="top" secondItem="d1A-hq-KE6" secondAttribute="bottom" constant="15" id="wcs-Xc-7Qw"/>
+                            <constraint firstItem="HI2-Kq-u0R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xiV-CZ-Amb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resetButton" destination="HI2-Kq-u0R" id="d6b-1r-3pu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

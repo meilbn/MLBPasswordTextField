@@ -188,4 +188,14 @@
     }
 }
 
+#pragma mark - Public Methods
+
+- (void)reset {
+    self.text = @"";
+    self.mlb_pwdRenderView.mlb_rCurrentNumberOfDot = 0;
+    if (_mlb_showCursor) {
+        self.mlb_pwdRenderView.mlb_rShowCursor = YES;
+    }
+}
+
 @end
