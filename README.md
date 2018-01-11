@@ -45,6 +45,7 @@ Delegate Implement delegate below to get called when input complete:
 - [x] Cursor supported (>= 0.0.3)
 
 ## Version History
+- 0.0.5 Add reset function to clear password.
 - 0.0.4 Fixed render view rect border has 1 pixel space when border width is 0.5 in iPhone 5S(i.e. 2x).
 - 0.0.3 Support show cursor.
 - 0.0.2 Bug fixes. Draw border and dot more precision.
@@ -121,6 +122,7 @@ MLBPasswordTextField * textField = [[MLBPasswordTextField alloc] initWithFrame:C
 - [x] 支持显示光标 (版本 >= 0.0.3)
 
 ## 版本历史
+- 0.0.5 增加了重置密码方法。
 - 0.0.4 修复了当 borderWidth 为 0.5（也就是默认宽度）时，在 iPhone 5S（也就是 2x） 上画的边框存在 1 像素空隙的 bug。
 - 0.0.3 支持显示光标。
 - 0.0.2 Bug 修复。更加精确地画边框和点。
@@ -165,3 +167,4 @@ MLBPasswordTextField 使用 MIT 许可证，详情见 LICENSE 文件。
 [Demo_v0.0.3]: https://github.com/meilbn/MLBPasswordTextField/blob/master/Screenshots/Demo_v0.0.3.gif
 
 [Demo_In_IB]: https://github.com/meilbn/MLBPasswordTextField/blob/master/Screenshots/Demo_In_IB.png
+
